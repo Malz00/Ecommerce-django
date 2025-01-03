@@ -1,0 +1,45 @@
+    CRUD = this part interact with the data base its stand for
+
+    create = POST
+    retrieve/ list/ search == GET
+    update == PUT / Patch/ Post
+    Delete == delete/ remove
+
+<a href="{{obj.get_absolute_url}}">{{ obj.title}}</a> <br/>
+
+
+
+def finalsearch(self, query):
+        return self.get_queryset().active().search(query)
+def search(self, query):
+        return self.get_queryset().active().search(query)
+    
+   
+
+cart 
+
+checkout process
+
+cart --> checkout view
+
+        login/register or enter email as guess
+        shipping adress
+        billing info
+                billing adress
+                credit card / payment
+
+2. billing app/component
+        billing profile
+                user or email ( for guess)
+                generate payment processor token (stripe or btaintee)
+3 orders / invoice component 
+        connecting th billing profile
+        shipping/ billing adress
+        cart
+        status -- shipped? cancelled
+
+
+backuo fixtures
+cd ../
+python manage.py dumpdata products --format json --indent 4 > products/fixtures/products.jsom
+        

@@ -1,0 +1,14 @@
+{{ object.title }} <br/>
+{{ object.description }} <br/>
+{% if object.image %}
+    <img src="{{ object.image.url }}" alt="{{ object.title }}" class="img-fluid">
+    {{ cart }}
+        
+    {% if object in work.products.exists }
+        In cart <button class="btn btn-danger"> Remove? </button> 
+    {% else %}
+        <button class="btn btn-success">  Add to cart </button>
+    {% endif %}
+
+
+{% endif %}

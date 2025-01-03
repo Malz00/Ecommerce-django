@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+<div class="text-center">
+    <h1> {{ title }}</h1>
+    <h1>Hello,yess malz 22!!!</h1>
+    
+</div>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+               
+
+                <div class="col-sm-6 col-12 mx-auto">
+                    {{ content }}
+                <form class="contact-form" method="POST" action="{% url 'contact' %}"> {% csrf_token %}
+                    {{ form.as_p }}
+                    <button type="submit" class="btn btn-primary" >submit</button>
+                </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
+
+
+
+
+
